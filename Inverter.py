@@ -100,6 +100,7 @@ def read_from_port(ser):
             pass
 
 def write_cmd(ser):
+    client.loop_start()
     while True:
         #dc
         serial.write(bytes.fromhex('03ff4600b8'))
